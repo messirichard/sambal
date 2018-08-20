@@ -1,0 +1,73 @@
+{% extends layout %}
+{% block title %}Gallery - {% endblock %}
+{% block menu %}gallery{% endblock %}
+{% block content %}
+	<div class="outer-middle-pages back-white min-h600 prelatife">
+		<div class="clear height-50"></div><div class="height-15"></div><div class="height-2"></div>
+			<div class="prelatife container">
+				<div class="outer-inside-pages">
+					<div class="tops-insides-page">
+						<div class="back-lines"></div>
+						<div class="texts"><h1>GALLERY</h1></div>
+						<div class="clear"></div>
+					</div>
+					<div class="clear height-50"></div>
+					<div class="insd-middle text-center content-text">
+						<div class="hidden-xs">
+							<span>FRONTLINE GALLERY is defined by our multi-STUDY ability to operate seamlessly <br>in a number of different design arenas from hospitality and commercial <br>projects to high-end residential DWELLINGS and interior merchandising. A <br>selection of our experience is presented below.</span>
+						</div>
+						<div class="visible-xs">
+							<span>FRONTLINE GALLERY is defined by our multi-STUDY ability to operate seamlessly in a number of different design arenas from hospitality and commercial projects to high-end residential DWELLINGS and interior merchandising. A selection of our experience is presented below.</span>
+						</div>
+
+						<div class="clear height-50"></div>
+						<div class="height-40"></div>
+						
+						<div class="listing-gallery">
+							<div class="row">
+								{% for list in data %}
+								<div class="col-lg-4 col-md-4 col-sm-6">
+									<div class="itemss">
+										<a href="javascript:;" class="my-hover-gallery">
+											<img class="img-responsive" src="{{ app.request.baseurl }}/images/gallery/{{ list.thumb }}" alt="">
+											<div class="descl text-center">
+												<div class="prelatife">
+													<div class="clear height-50"></div><div class="height-50"></div><div class="height-50"></div> <div class="height-15"></div>
+													<div class="titles" onclick="location.href='{{ url('gallery-detail', {'id' : list.id, 'name': 'grand-island-club-house'}) }}';">{{ list.name|upper }}</div>
+													<div class="location">{{ list.location|upper }}</div>
+													<div class="blocks-button">
+														<button class="view-detail-gallery" onclick="location.href='{{ url('gallery-detail', {'id' : list.id, 'name': 'grand-island-club-house'}) }}';">VIEW PROJECT</button>
+													</div>
+												</div>
+												<div class="clear"></div>
+											</div>
+										</a>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+							<div class="clear"></div>
+						</div>
+
+					<div class="clear height-50"></div>
+					<div class="clear height-20"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+		<div class="clear height-50"></div><div class="height-5"></div>
+		<div class="clear"></div>
+	</div>
+	<script type="text/javascript">
+		$(function(){
+			$('a.my-hover-gallery').live({
+				    mouseenter: function () {
+				    	$(this).find('.descl').show();
+				    },
+				    mouseleave: function () {
+						$(this).find('.descl').hide();
+				    }
+				    });
+		});
+	</script>
+{% endblock %}

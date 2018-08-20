@@ -1,0 +1,125 @@
+<div class="outers-back-footer-t"></div>
+<footer class="foot">
+	<div class="back-footer-dalam">
+		<div class="prelatife container">
+			<div class="clear height-20"></div>
+			
+			<div class="row">
+				<div class="col-md-4 col-sm-4">
+					<div class="menu-footer">
+						<ul class="list-unstyled">
+							<li><a href="{{ url('homepage') }}">Home</a></li>
+							<li><a href="{{ url('about') }}">About Us</a></li>
+							<li><a href="{{ url('marketing') }}">Marketing</a></li>
+							<li><a href="{{ url('product') }}">Product Showcase</a></li>
+							<li><a href="{{ url('agent') }}">Become an Agent</a></li>
+							<li><a href="{{ url('contactus') }}">Contact Us</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<div class="social-footer">
+						<b>Follow Us on:</b> <div class="clear height-5"></div>
+						<a target="_blank" href="https://www.facebook.com/sambelcapjempol/"><i class="fa fa-facebook-square"></i></a>&nbsp;&nbsp;
+						{# <a target="_blank" href="http://twitter.com/#!/sambelcapjempol"><i class="fa fa-twitter"></i></a>&nbsp;&nbsp; #}
+						<a target="_blank" href="https://www.instagram.com/sambelcapjempol/"><i class="fa fa-instagram"></i></a>&nbsp;&nbsp;
+						{# <a target="_blank" href="#"><i class="fa fa-google-plus"></i></a> #}
+					</div>
+					<div class="clear height-20"></div>
+					<small>Find new events, new promotions and other news by <br>
+						following Sambel Cap Jempol&rsquo;s social media networks.</small>
+				</div>
+				<div class="col-md-4 col-sm-4">
+					<b>Contact Sambel Cap Jempol</b> <div class="clear height-5"></div>
+					<dl class="dl-horizontal margin-bottom-0">
+					  <dt><i class="fa fa-phone"></i></dt>
+					  <dd>021 6391303</dd> <div class="clear height-3"></div>
+					  <dt><i class="fa fa-paper-plane"></i></dt>
+					  <dd><a href="mailto:info@sambelcapjempol.com">info@sambelcapjempol.com</a></dd> <div class="clear"></div>
+					</dl>
+					<div class="clear height-25"></div>
+					{% if menu != 'contact' %}
+					<div class="box_frm_inQuiry">
+						<b>Quick Inquiry</b> <div class="clear height-5"></div>
+						<div class="frm-nfooter">
+							<form class="form-inline" method="post" action="{{ url('s_booking') }}">
+							  <div class="form-group">
+							    <label class="sr-only" for="exampleInputEmail3">Your Name</label>
+							    <input type="text" name="reserve[name]" class="form-control" id="exampleInputEmail3" placeholder="Your Name">
+							  </div>
+							  <div class="form-group">
+							    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+							    <input type="email" name="reserve[email]" class="form-control" id="exampleInputEmail3" placeholder="Email address">
+							  </div>
+								<div class="pos_captcha_fix_abs">
+									<div class="g-recaptcha" data-sitekey="6LcqohUTAAAAAGhTVpn90m8Az3CgGkpfYQmUm4GR"></div>
+								</div>
+							  <button type="button" class="btn btn-success"> > </button>
+							</form>
+						</div>
+					</div>
+					<script src='https://www.google.com/recaptcha/api.js'></script>
+					<script type="text/javascript">
+					$(document).ready(function(){
+						$('.pos_captcha_fix_abs .g-recaptcha').hide();
+
+						$('.frm-nfooter button[type=button].btn-success').live('click', function(){
+							$(this).prop('type', 'submit');
+							$('.pos_captcha_fix_abs .g-recaptcha').show();
+							return false;
+						});
+					});
+					</script>
+						{% if msg == 'error_message' %}
+							<script type="text/javascript">
+						    alert("Error sending Inquiry Form!.");
+						    // return false;
+							</script>
+						{% endif %}
+						{% if msg == 'success' %}
+							<script type="text/javascript">
+						    alert("Thank you for Inquiry! we will respond to you shortly.");
+						    </script>
+						{% endif %}
+					{% endif %}
+
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="clear height-30"></div>
+			<div class="clear"></div>
+		</div>
+	</div>
+	<div class="prelatife container"> <div class="clear height-15"></div>
+		<div class="t-copyright">
+			Copyright &copy; 2016 Sambel Cap Jempol - Cap Ibu Jari. <br>
+			Site by <a title="Website Design Surabaya" target="_blank" href="http://markdesign.net/">Mark Design</a>.
+		</div>
+		<div class="clear height-25"></div>
+	</div>
+</footer>
+
+<script type="text/javascript">
+$(function() {
+	// scroll body to 0px on click
+			$('#back-top a').click(function () {
+				$('body,html').animate({
+					scrollTop: 0
+				}, 1200);
+				return false;
+			});
+
+	});
+</script>
+<style type="text/css" media="screen">
+	.pos_captcha_fix_abs{
+	    position: absolute;
+	    left: 10px;
+	    bottom: -85px;
+	    z-index: 50;
+	}
+	.frm-nfooter{
+		position: relative;
+	}
+</style>

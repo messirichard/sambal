@@ -1,0 +1,103 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>{% block title %}{% endblock %} Sambel Cap Jempol</title>
+	<meta name="keywords" content="sambel cap jempol, cap jempol, lombok, apo ronju, chili sauce, sambel indonesia, sambel pedas, sambel enak, sambel vegetarian, sambel udang, cap ibu jari">
+	<meta name="description" content="Sambel Cap Jempol Company produces special chili sauces (sambel cap ibu jari) that has served the people of Indonesia for over 30 years and has been trusted by the public over the quality and guaranteed product.">
+
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+	 
+    <link rel="stylesheet" type="text/css" href="{{ app.request.baseurl }}/asset/css/screen.css" />
+    <link rel="stylesheet" type="text/css" href="{{ app.request.baseurl }}/asset/css/comon.css" />
+
+    <link rel="Shortcut Icon" href="{{ app.request.baseurl }}/asset/images/favicon.jpg" />
+	<link rel="icon" type="image/ico" href="{{ app.request.baseurl }}/asset/images/favicon.jpg" />
+	<link rel="icon" type="image/x-icon" href="{{ app.request.baseurl }}/asset/images/favicon.jpg" />
+	
+	<!-- jQuery -->
+	<script type="text/javascript" src="{{ app.request.baseurl }}/asset/js/jquery.min.js"></script>
+
+	<link rel="stylesheet" href="{{ app.request.baseurl }}/asset/js/fancy/jquery.fancybox.css" type="text/css" media="screen" />
+	<script type="text/javascript" src="{{ app.request.baseurl }}/asset/js/fancy/jquery.fancybox.js"></script>
+	<script type="text/javascript">
+		$(document).ready(function() {
+			
+			$('.fancy-img').fancybox({
+					type		: 'image',
+					fitToView	: false,
+					autoSize	: false,
+					closeClick	: false,
+					openEffect	: 'none',
+					closeEffect	: 'none',
+				});
+
+		});
+	</script>
+
+	<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+	<!-- Bootstrap -->
+    <link rel="stylesheet" type="text/css" href="{{ app.request.baseurl }}/asset/bootstrap-3/css/bootstrap.min.css" />
+	<script type="text/javascript" src="{{ app.request.baseurl }}/asset/bootstrap-3/js/bootstrap.js"></script>
+	
+	<link rel="stylesheet" type="text/css" href="{{ app.request.baseurl }}/asset/css/styles.css">
+
+	<!-- --------- Media Css ----------- -->
+	<link rel="stylesheet" type="text/css" href="{{ app.request.baseurl }}/asset/css/media.styles.css">
+	{# <link href="{{ app.request.baseurl }}/asset/third/font-awesome/css/font-awesome.css" rel="stylesheet"> #}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	
+	<script type="text/javascript" src="{{ app.request.baseurl }}/asset/js/jquery.scrollTo-1.4.3.1-min.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function(){
+				//Image hover
+				$(".serv_block").live('mouseover',function(){
+						var info=$(this).find("img");
+						info.stop().animate({opacity:0.5},100);
+						$(".preloader").css({'background':'none'});
+					}
+				);
+				$(".serv_block").live('mouseout',function(){
+						var info=$(this).find("img");
+						info.stop().animate({opacity:1},100);
+						$(".preloader").css({'background':'none'});
+					}
+				);
+
+				
+			$(".toScroll").live('click', function(){
+				var id = $(this).attr("data-id");
+				//alert(id);
+				$.scrollTo('#'+id , 1500);
+			});
+
+		});
+	</script>
+	<!-- Latest compiled and minified CSS -->
+	<link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/css/jasny-bootstrap.min.css">
+	<!-- Latest compiled and minified JavaScript -->
+	<script src="//cdnjs.cloudflare.com/ajax/libs/jasny-bootstrap/3.1.3/js/jasny-bootstrap.min.js"></script>
+</head>
+<!-- Preloader -->
+    {# <div id="preloader">
+        <div id="statusloader">&nbsp;</div>
+    </div> #}    
+{% block maincontent %}{% endblock %}
+<script type="text/javascript">
+	//<![CDATA[
+		$(window).load(function() { // makes sure the whole site is loaded
+			$("#statusloader").fadeOut(); // will first fade out the loading animation
+			$("#preloader").delay(50).fadeOut("slow"); // will fade out the white DIV that covers the website.
+
+			$('.wrapper').show();
+		})
+	//]]>
+</script>
+</html>

@@ -1,0 +1,82 @@
+<!-- /. Header -->
+<header class="head {% if menu == 'homepage' %}homep{% endif %}">
+	<div class="prelatife container hidden-xs">
+		<div class="back_inheader_ds">
+
+	    	<div class="clear height-5"></div><div class="height-2"></div>
+	    	<div class="row">
+	    		<div class="col-md-3 col-sm-3">
+					<div class="lgo-header fleft margin-right-0">
+					    <a href="{{ url('homepage') }}"><img src="{{ app.request.baseurl }}/asset/images/logo-sambel-capjempol.png" alt=""></a>
+					</div>
+	    		</div>
+	    		<div class="col-md-9 col-sm-9">
+					<div class="fright back-leftheader-call">
+					    <div class="texts">6391303</div>
+					</div> <div class="clear"></div>
+					<div class="fleft texts-logo mar-le-60 margin-right-10"> <div class="clear height-20"></div>
+						<a href="{{ url('homepage') }}"><img src="{{ app.request.baseurl }}/asset/images/lgo-text-capibujari.png" alt=""></a>
+					</div>
+					<div class="fleft tagline-trusted">
+						<div class="clear height-25"></div>
+						<img src="{{ app.request.baseurl }}/asset/images/trusted-brand-sinces.png" alt="">
+					</div>
+					<div class="fright tagline-naturaled-r">
+						<div class="clear height-25"></div><div class="height-10"></div><div class="height-3"></div>
+						<img src="{{ app.request.baseurl }}/asset/images/text-header-100narural.png" alt="">
+					</div>
+					<div class="clear height-15"></div><div class="height-15"></div>
+				    <div class="top-menu mar-le-60">
+				        <ul class="list-inline">
+				            <li {% if menu == 'homepage' %}class="active"{% endif %}><a href="{{ url('homepage') }}">Home</a></li>
+				            <li {% if menu == 'about' %}class="active"{% endif %}><a href="{{ url('about') }}">About Us</a></li>
+				            <li {% if menu == 'marketing' %}class="active"{% endif %}><a href="{{ url('marketing') }}">Marketing</a></li>
+				            <li {% if menu == 'product' %}class="active"{% endif %}><a href="{{ url('product') }}">Product Showcase</a></li>
+				            <li {% if menu == 'agent' %}class="active"{% endif %}><a href="{{ url('agent') }}">Become an Agent</a></li>
+				            <li {% if menu == 'contact' %}class="active"{% endif %}><a href="{{ url('contactus') }}">Contact Us</a></li>
+				        </ul>
+				    </div>
+	    			
+	    		</div>
+	    	</div>
+
+	    	<div class="clear"></div>
+		</div>
+		<div class="clear"></div>
+	</div>
+
+	<div class="prelatife container visible-xs">
+		<div class="lgo-header text-center">
+			 <a href="{{ url('homepage') }}"><img class="img-reponsive pc-center" src="{{ app.request.baseurl }}/asset/images/logo-sambel-capjempol.png" alt=""></a>
+			 <div class="clear height-10"></div>
+			 CAP IBU JARI
+			 <div class="clear"></div>
+			 <span class="tgline">Trusted Brand Since 1976</span>
+		</div>
+		<div class="clear height-5"></div>
+	</div>
+	{# view visible phone #}
+	<div class="visible-xs navbar-default">
+		<div class="navbar-header">
+	      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+	        MENU
+	      </button>
+	  </div>
+	    <!-- Collect the nav links, forms, and other content for toggling -->
+	    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+	      
+	      <ul class="nav navbar-nav navbar-right">
+	        <li {% if menu == 'homepage' %}class="active"{% endif %}><a href="{{ url('homepage') }}">Home</a></li>
+            <li {% if menu == 'about' %}class="active"{% endif %}><a href="{{ url('about') }}">About Us</a></li>
+            <li {% if menu == 'marketing' %}class="active"{% endif %}><a href="{{ url('marketing') }}">Marketing</a></li>
+            <li {% if menu == 'product' %}class="active"{% endif %}><a href="{{ url('product') }}">Product Showcase</a></li>
+            <li {% if menu == 'agent' %}class="active"{% endif %}><a href="{{ url('agent') }}">Become an Agent</a></li>
+            <li {% if menu == 'contact' %}class="active"{% endif %}><a href="{{ url('contactus') }}">Contact Us</a></li>
+	      </ul>
+
+	    </div><!-- /.navbar-collapse -->
+    </div>
+    {# End view visible phone #}
+</header>
+
+<div class="outers-back-reds-lk"></div>

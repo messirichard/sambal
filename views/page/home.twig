@@ -1,0 +1,114 @@
+{% extends layout %}
+{% block title %}{% endblock %}
+{% block menu %}homepage{% endblock %}
+{% block content %}
+		<div class="outers-middle-contents  prelatife">
+
+			<div class="outers-f-fcs prelatife back-red">
+				<div class="prelatife container">
+					{# start fcs #}
+						<div class="prelatife">
+							<div class="outer-blok-fcs prelatife">
+								<div id="carousel-example-fcs" class="carousel fade" data-ride="carousel">
+								  <!-- Wrapper for slides -->
+								  <div class="carousel-inner" role="listbox">
+								    <div class="item active">
+								      <img src="{{ app.request.baseurl }}/asset/images/fcs-1.jpg" alt="">
+								    </div>
+								    <div class="item">
+								      <img src="{{ app.request.baseurl }}/asset/images/fcs-1.jpg" alt="">
+								    </div>
+								    <div class="item">
+								      <img src="{{ app.request.baseurl }}/asset/images/fcs-1.jpg" alt="">
+								    </div>
+								    <div class="item">
+								      <img src="{{ app.request.baseurl }}/asset/images/fcs-1.jpg" alt="">
+								    </div>
+								  </div>
+								 		<!-- Indicators -->
+								  <ol class="carousel-indicators">
+								    <li data-target="#carousel-example-fcs" data-slide-to="0" class="active"></li>
+								    <li data-target="#carousel-example-fcs" data-slide-to="1"></li>
+								    <li data-target="#carousel-example-fcs" data-slide-to="2"></li>
+								    <li data-target="#carousel-example-fcs" data-slide-to="3"></li>
+								  </ol>
+								</div>
+								{# end carousel fcs #}
+								<div class="clear"></div>
+							</div>
+							
+							<div class="back-shadow-fcs"></div>
+							<div class="clear"></div>
+						</div>
+						{# end fcs #}
+					<div class="clear"></div>
+				</div>
+			</div>
+
+			<div class="outers-back-crem-hm">
+				<div class="prelatife container">
+					<div class="clear height-50"></div><div class="height-5"></div><div class="height-3"></div>
+					
+					<div class="outers-list-bannerhome">
+						<div class="row">
+							<div class="col-md-4 col-sm-12">
+								<div class="prelatife zind-5">
+									<div class="itemss back1">
+										<div class="text">
+											<h6>Browse</h6><div class="clear"></div>
+											Our Product <br>
+											Showcase
+										</div>
+										<div class="abs-bottom-link">
+											<a href="{{ url('product') }}"><img src="{{ app.request.baseurl }}/asset/images/back-btns-click-here.png" alt=""></a>
+										</div>
+									</div>
+									<div class="back-shadowbnner"></div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="prelatife zind-5">
+									<div class="itemss back2">
+										<div class="text">
+											<h6>Join</h6><div class="clear"></div>
+											Our Successful <br>
+											Network <br>
+											Distributions
+										</div>
+										<div class="abs-bottom-link">
+											<a href="{{ url('agent') }}"><img src="{{ app.request.baseurl }}/asset/images/back-btns-click-here.png" alt=""></a>
+										</div>
+									</div>
+									<div class="back-shadowbnner"></div>
+								</div>
+							</div>
+							<div class="col-md-4 col-sm-12">
+								<div class="prelatife zind-5">
+									<div class="itemss back3">
+										<div class="text">
+											<h6>Contact</h6><div class="clear"></div>
+											Our Friendly <br>
+											Customer <br>
+											Service
+										</div>
+										<div class="abs-bottom-link">
+											<a href="{{ url('contactus') }}"><img src="{{ app.request.baseurl }}/asset/images/back-btns-click-here.png" alt=""></a>
+										</div>
+									</div>
+									<div class="back-shadowbnner"></div>
+								</div>
+							</div>
+						</div>
+						<div class="clear"></div>
+					</div>
+
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="clear"></div>
+		</div>
+		{# end outer middle contents #}
+		<div class="clear"></div>
+{% endblock %}

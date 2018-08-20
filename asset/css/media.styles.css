@@ -1,0 +1,270 @@
+/*----------------- Responsive ---------------------*/
+@media (max-width: 1300px){
+	
+}
+
+/* Large desktop */
+@media (max-width : 1135px){
+	
+	.container{
+		max-width: inherit;
+		width: 100%;
+		border: none;
+		padding: 0 2em;
+	}
+}
+
+/*ipad width*/
+@media (max-width : 1040px){
+	
+	.container{
+		max-width: inherit;
+		width: 100%;
+		border: none;
+		padding: 0 2em;
+	}
+	.top-menu ul li {
+	    margin: 0;
+	    padding: 0 10px;
+	}
+	.back_inheader_ds{ width: 100%; }
+	.tagline-naturaled-r{ width: 340px; }
+	.tagline-naturaled-r img{ max-width: 100%; }
+
+	.texts-logo.mar-le-60{
+		max-width: 170px; margin-top: 7px;
+	} 
+	.texts-logo.mar-le-60 img{ max-width: 100%; }
+	.tagline-trusted{ max-width: 170px; margin-top: 7px; }
+	.tagline-trusted img{ max-width: 100%; }
+
+	.outers-f-fcs{ height: 383px; }
+	.outers-f-fcs .back-shadow-fcs{
+		width: 100%;
+		left: 0px;
+		background-size: 100% 100%;
+	}
+
+	.outers-list-bannerhome .itemss{
+		width: 100%;
+	}
+	.outers-list-bannerhome .itemss .text{ font-size: 16px; }
+	.outers-list-bannerhome .itemss .text h6{ font-size: 26px; }
+	.outers-list-bannerhome .back-shadowbnner{ width: 100%; background-size: 100% 100%; }
+	.outers-back-footer-t{ background-size: 100% 100%; }
+	footer small{ font-weight: 300; }
+	footer .frm-nfooter input{ width: 125px; }
+
+}
+
+/*(max-width : 1024px) and*/
+
+@media (max-width : 1002px) {
+	
+	.container{
+		padding: 0 15px;
+	}
+
+	.tagline-trusted{ display: none; }
+	.top-menu ul li a{ font-size: 13px; }
+	.top-menu ul li{ padding: 0 6px; }
+	.lgo-header{ float: none; }
+	.lgo-header img{ max-width: 100%; }
+	
+	.outers-back-crem-hm{ height: auto; padding-bottom: 1.6em; }
+	.outers-list-bannerhome .itemss{ width: 333px; margin-bottom: 3em; }
+	.outers-list-bannerhome .itemss:last-child{ margin-bottom: 0px; }
+	.outers-list-bannerhome .prelatife.zind-5{ margin:0 auto; width: 333px; }
+
+}
+
+@media (max-width: 980px){
+
+	.lgo-header{ float: none; }
+	.lgo-header img{ max-width: 100%; }
+
+	.content-text p{ text-align: center; }
+	.texts-logo.mar-le-60{ margin-left: -20px; }
+	.tagline-naturaled-r{ display: none; }
+	.top-menu{ margin-left: -20px; margin-top: 12px; }
+	.top-menu ul li a{ font-size: 12px; }
+
+	.outers-f-fcs{ height: 295px; }
+	
+	footer .dl-horizontal dd a,
+	footer .dl-horizontal dd,
+	footer.foot{ font-size: 13px; }
+
+	.frm-nfooter .form-inline .form-group{ margin-bottom: 10px; }
+
+}
+ 
+/* Portrait tablet to landscape and desktop */
+@media (min-width: 768px) and (max-width: 979px) {
+	
+
+}
+
+@media (max-width: 768px){
+
+}
+ 
+/* Landscape phone to portrait tablet */
+@media (max-width: 767px) {
+	
+	.navbar-default {
+		margin: 0;
+		background: none;
+		background-color: transparent;
+		border-radius: 0px;
+		border: 0px;
+		border-bottom: 0px;
+	}
+	.navbar-toggle {
+		margin-top: 14px;
+	}
+	.navbar-default .navbar-toggle:hover, .navbar-default .navbar-toggle:focus {
+	    background-color: rgba(221, 221, 221, 0.1);
+	}
+	.navbar-default .navbar-nav{
+		margin-bottom: 0;
+	}
+	.navbar-default .navbar-brand{ padding-bottom: 12px; color: #fff; font-weight: 700; }
+
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+	.navbar-default .navbar-nav .open .dropdown-menu > li > a,
+	.navbar-default .navbar-nav > li > a:hover,
+	.navbar-default .navbar-nav > li > a {
+		color: #fff;
+		font-size: 14px;
+		text-align: center;
+		font-family: @Oswald; letter-spacing: 1px; font-weight: 300; color: #fff; text-transform: uppercase;
+		/*padding: 7px 15px;*/
+	}
+	.navbar-default .navbar-nav>.active>a, .navbar-default .navbar-nav>.active>a:hover, .navbar-default .navbar-nav>.active>a:focus {
+	    color: #fff;
+	    background-color: rgba(255, 255, 255, 0.15);
+	}
+	.navbar-default .navbar-toggle {
+	    border-color: transparent;
+	    border: 0px;
+	    margin: 0em auto;
+	    /*width: 45px;*/
+	    display: block;
+	    float: none;
+	    text-transform: uppercase;
+	    font-family: 'Raleway', sans-serif;
+	    font-size: 14px; font-weight: 700; color: #fff;
+	}
+	.navbar-default .navbar-collapse, .navbar-default .navbar-form{
+		border-color: transparent;
+		margin: 0 -15px;
+	}
+	.navbar-nav > li{ border-bottom: 1px solid #ddd; }
+	.navbar-collapse{ border-top: 0px; box-shadow: none; }
+	
+	header.head{
+		background: none;
+		background-color: #790005;
+		height: auto; 
+		/*padding-bottom: 1.2em;*/
+	}
+	.lgo-header img{
+		max-width: 135px;
+	}
+	.lgo-header{
+		padding-top: 20px;
+		margin: 0 auto;
+
+		font-family: 'Raleway', sans-serif;
+		font-size: 20px; color: #fff; font-weight: 700;
+	} 
+	.lgo-header span.tgline{
+		display: block; text-align: center;
+		padding-top: 4px;
+		font-family: 'Times New Roman', sans-serif;
+		font-size: 15px; font-weight: 400; font-style: italic; color: #fff;
+	}
+	.navbar-default .navbar-header{
+		margin-top: 15px;
+		min-height: 38px; height: auto;
+		background-color: #d32027;
+	}
+
+	.lgo-header img{}
+	.outers-f-fcs{ 
+		height: auto;
+		/*padding-bottom: 25px;*/
+		padding-top: 0em;
+	}
+	.outers-f-fcs .container{
+		padding: 0 !important;
+	}
+	.outers-f-fcs .back-shadow-fcs{ display: none; }
+	.outers-back-reds-lk{ 
+		height: 0; 
+	}
+	.outers-middle-contents .outer-blok-fcs .carousel-indicators{
+		bottom: 0px;
+		right: 10px;
+	}
+	.outers-back-footer-t{ background-size: inherit; }
+	.back-footer-dalam { text-align: center; }
+	.back-footer-dalam .col-sm-4{
+		margin-bottom: 30px;
+	} footer .frm-nfooter input{ margin: 0 auto; }
+	footer .t-copyright{ text-align: center; }
+
+	footer .dl-horizontal dt,
+	footer .dl-horizontal dd{ float: left; }
+	footer .dl-horizontal dd{ margin-left: 5px; }
+	footer .dl-horizontal { 
+		/*max-width: 320px;*/
+		max-width: 235px;
+		margin: 0 auto; 
+	}
+
+	.outer-list-product-pg .items{ width: 258px; margin: 0 auto 35px; }
+	.content-text p a.mails{ font-size: 17px; }
+
+	.contacts-form.text-contact .col-xs-12{ padding: 0px; }
+
+	/*// revision header*/
+
+
+}
+
+/* Landscape phone to portrait tablet */
+@media (max-width: 600px) {
+	
+	.disn-block{
+		/*display: block;*/
+	}
+
+}
+
+/* Landscape phones and down */
+@media (max-width: 480px) {
+	
+
+
+}
+
+@media (max-width: 360px) {
+	
+	
+
+}
+
+@media (max-width: 358px) {
+	
+	.outers-list-bannerhome .prelatife.zind-5,
+	.outers-list-bannerhome .itemss {
+	    width: 100%;
+	}
+
+}
+
+@media (max-width: 319px) {
+
+}

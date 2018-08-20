@@ -1,0 +1,72 @@
+{% extends layout %}
+{% block title %}Gallery - {% endblock %}
+{% block menu %}gallery{% endblock %}
+{% block content %}
+	<div class="outer-middle-pages back-white min-h600 prelatife">
+		<div class="clear height-50"></div><div class="height-15"></div><div class="height-2"></div>
+			<div class="prelatife container">
+				<div class="outer-inside-pages">
+					<div class="tops-insides-page">
+						<div class="back-lines"></div>
+						<div class="texts"><h1>GALLERY</h1></div>
+						<div class="clear"></div>
+					</div>
+					<div class="clear height-50"></div>
+					<div class="insd-middle text-center content-text gallery-b-detail">
+						<div class="row prelatife">
+							<div class="col-md-12">
+								<div class="gall-top">
+									<h1>{{ data.name|upper }}</h1> <div class="clear"></div>
+									<h4>{{ data.location|upper }}</h4>
+								</div>
+							</div>
+							<div class="col-md-12">
+								<div class="bst-back-tgallery">
+									<a href="{{ path('gallery') }}"><img src="{{ app.request.baseurl }}/asset/images/bt-back-t-gallery.png" alt=""></a>
+								</div>
+							</div>
+						</div>
+
+						<div class="clear height-50"></div>
+						{# <div class="height-40"></div> #}
+						<div class="descriptions-text-middle-gallerydetail text-center">
+							{# <span>About this project</span> #}
+							{# <div class="clear height-25"></div> #} <div class="clear height-20"></div>
+							<p>{{ data.desc|raw }}</p>
+							<div class="clear"></div>
+						</div>
+						<div class="clear height-40"></div>
+						<div class="detail-gallery-pict">
+							<img src="{{ app.request.baseurl }}/images/gallery/big/{{ data.big }}" style="width: 1196px; height: auto;" alt="" class="img-responsive">
+						</div>
+						<div class="clear height-10"></div>
+						<div class="text-right bt-vw-allpictures">
+							<a class="example-image-link" href="{{ app.request.baseurl }}/images/gallery/{{ data.folder }}/{{ data.big }}" data-lightbox="example-set"><img src="{{ app.request.baseurl }}/asset/images/bt-view-slideshow.png" alt=""></a>
+							{% if data.list_gallery %}
+								{% for key, list_item in data.list_gallery %}
+									{% if key != 0 %}
+										<a class="example-image-link" href="{{ app.request.baseurl }}/images/gallery/{{ data.folder }}/{{ list_item }}" data-lightbox="example-set"></a>
+									{% endif %}
+								{% endfor %}
+							{% endif %}
+						</div>
+
+					<div class="clear height-50"></div>
+					{# <div class="clear height-20"></div> #}
+				</div>
+				<div class="clear"></div>
+			</div>
+
+		<div class="clear height-50"></div><div class="height-5"></div>
+		<div class="clear"></div>
+	</div>
+
+	<link rel="stylesheet" href="{{ app.request.baseurl }}/asset/js/lightbox/css/lightbox.css">
+	<script type="text/javascript" src="{{ app.request.baseurl }}/asset/js/lightbox/js/lightbox.js"></script>
+	<script type="text/javascript">
+	    lightbox.option({
+	      'resizeDuration': 200,
+	      'wrapAround': true
+	    })
+	</script>
+{% endblock %}

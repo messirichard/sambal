@@ -1,0 +1,41 @@
+{% extends layout %}
+{% block title %}Product Showcase - {% endblock %}
+{% block menu %}product{% endblock %}
+{% block content %}
+<div class="outers-middle-contents  prelatife">
+			<div class="outers-back-crem-hm insidepage">
+				<div class="prelatife container">
+					<div class="clear height-20"></div><div class="height-10"></div>
+
+					<div class="content-text tengah text-center">
+						<h1 class="title-page">PRODUCT SHOWCASE</h1><div class="clear"></div>
+						<span class="quotes">The best of us</span>
+						<div class="clear height-20"></div>
+						
+						<div class="clear height-20"></div>
+
+						<div class="outer-list-product-pg">
+							<div class="row">
+								{% for key, item in productData %}
+								<div class="col-md-3 col-sm-4">
+									<div class="items">
+										<a title="{{ item.nama|raw }}" class="fancyap" rel="group-thumb" href="{{ app.request.baseurl }}/images/produk/big/{{ item.big }}">
+						                    <img class="img-responsive" src="{{ app.request.baseurl }}/images/produk/{{ item.pict }}" alt="">
+						                </a>
+						                <h3>
+						                    <a title="{{ item.nama|raw }}" class="fancyap" rel="group-link" href="{{ app.request.baseurl }}/images/produk/big/{{ item.big }}">{{ item.nama|raw }}</a>
+						                </h3>
+									</div>
+								</div>
+								{% endfor %}
+							</div>
+							<div class="clear"></div>
+						</div> <div class="clear height-35"></div>
+					<div class="clear"></div>
+				</div>
+				<div class="clear"></div>
+			</div>
+
+			<div class="clear"></div>
+		</div>
+{% endblock %}

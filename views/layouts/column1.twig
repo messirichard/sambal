@@ -1,0 +1,10 @@
+{% extends 'layouts/main.twig' %}
+{% block maincontent %}
+<body>
+		<div class="wrapper prelatif">
+		{% include "/layouts/header.twig" with { 'menu': block('menu') } %}
+		{% block content %}{% endblock %}
+		{% include "/layouts/footer.twig" with { 'menu': block('menu') } %}
+		</div>
+</body>
+{% endblock %}
